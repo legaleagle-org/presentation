@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>LegalEagle</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <style>
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueBold.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueBold.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueBold.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueBold.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueBold.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 600;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueBoldItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueBoldItalic.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueBoldItalic.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueBoldItalic.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueBoldItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 600;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueCondensedBold.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueCondensedBold.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueCondensedBold.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueCondensedBold.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueCondensedBold.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 600;
+              font-stretch: condensed;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueMedium.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueMedium.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueMedium.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueMedium.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueMedium.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 500;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeue.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeue.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeue.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeue.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeue.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 400;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueItalic.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueItalic.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueItalic.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 400;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueLight.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueLight.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueLight.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueLight.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 300;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueLightItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueLightItalic.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueLightItalic.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueLightItalic.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueLightItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 300;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueThin.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueThin.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueThin.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueThin.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueThin.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 200;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueThinItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueThinItalic.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueThinItalic.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueThinItalic.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueThinItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 200;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueUltraLight.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueUltraLight.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueUltraLight.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueUltraLight.ttf") format("truetype"), url("lib/font/helvetica-neue/HelveticaNeueUltraLight.svg") format("svg");
+              /* Legacy iOS */
+              font-style: normal;
+              font-weight: 100;
+              font-stretch: normal;
+            }
+
+            @font-face {
+              font-family: "LESans";
+              src: url("lib/font/helvetica-neue/HelveticaNeueUltraLightItalic.eot");
+              /* IE9 Compat Modes */
+              src: url("lib/font/helvetica-neue/HelveticaNeueUltraLightItalic.eot?#iefix") format("embedded-opentype"), url("lib/font/helvetica-neue/HelveticaNeueUltraLightItalic.woff") format("woff"), url("lib/font/helvetica-neue/HelveticaNeueUltraLightItalic.ttf") format("truetype"), url("font/HelveticaNeueUltraLightItalic.svg") format("svg");
+              /* Legacy iOS */
+              font-style: italic;
+              font-weight: 100;
+              font-stretch: normal;
+            }
+        </style>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/legaleagle.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- favicon -->
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+	                <svg
+	                    xmlns="http://www.w3.org/2000/svg"
+	                    id="legalEagle_logo_svg"
+	                    viewBox="0 0 352 152"
+	                    width="640"
+	                    preserveAspectRatio>
+	                    <style>
+	                        .legalEagle_blue_gradient_1{fill:url(#legalEagle_blue_gradient_1);}
+	                        .legalEagle_yellow_gradient_1{fill:url(##legalEagle_yellow_gradient_1);}
+	                        .legalEagle_purple_gradient_1{fill:url(#legalEagle_purple_gradient_1);}
+	                        #logotype path { fill: #FFF; }
+	                    </style>
+	                    <g id="logotype">
+	                        <path d="M154.9 74.9h36.7v7.7h-27.8V96h25.7v7.3h-25.7v14.9h28.3v7.7h-37.2v-51z"/>
+	                        <path d="M229 117.7c0 1 .1 1.7.4 2.1.3.4.8.6 1.5.6h.9c.3 0 .7 0 1.1-.1v5.6c-.3.1-.7.2-1.1.3-.5.1-.9.2-1.4.3-.5.1-1 .2-1.4.2-.5 0-.9.1-1.2.1-1.7 0-3.1-.3-4.1-1-1.1-.7-1.8-1.8-2.1-3.5-1.6 1.6-3.6 2.7-6 3.4-2.4.7-4.6 1.1-6.8 1.1-1.7 0-3.3-.2-4.8-.7-1.5-.5-2.9-1.1-4-2-1.2-.9-2.1-2-2.8-3.4-.7-1.4-1-2.9-1-4.8 0-2.3.4-4.1 1.3-5.6.8-1.4 1.9-2.5 3.3-3.4 1.4-.8 2.9-1.4 4.6-1.8 1.7-.4 3.4-.6 5.1-.8 1.5-.3 2.9-.5 4.2-.6 1.3-.1 2.5-.3 3.5-.6s1.8-.7 2.4-1.3c.6-.6.9-1.5.9-2.7 0-1-.2-1.9-.8-2.6-.5-.7-1.1-1.2-1.9-1.5-.7-.4-1.6-.6-2.5-.7-.9-.1-1.8-.2-2.6-.2-2.3 0-4.2.5-5.6 1.4-1.5 1-2.3 2.4-2.5 4.4h-8.1c.1-2.4.7-4.4 1.7-5.9 1-1.6 2.3-2.8 3.8-3.8s3.3-1.6 5.3-2c2-.4 4-.6 6-.6 1.8 0 3.6.2 5.4.6 1.8.4 3.3 1 4.8 1.9 1.4.9 2.5 2 3.4 3.3s1.3 3 1.3 5v19.3zm-8.2-10.3c-1.2.8-2.8 1.3-4.6 1.5-1.8.2-3.6.4-5.4.8-.9.1-1.7.3-2.5.6s-1.5.6-2.1 1.1c-.6.5-1.1 1-1.5 1.8-.4.7-.5 1.6-.5 2.7 0 .9.3 1.7.8 2.3.5.6 1.2 1.1 1.9 1.5.7.4 1.5.6 2.4.8.9.1 1.7.2 2.4.2.9 0 1.9-.1 2.9-.4 1-.2 2-.6 3-1.2.9-.6 1.7-1.3 2.3-2.2.6-.9.9-2 .9-3.3v-6.2z"/>
+	                        <path d="M271.2 124c0 5.6-1.6 9.7-4.7 12.5-3.1 2.7-7.6 4.1-13.5 4.1-1.9 0-3.7-.2-5.6-.6-1.9-.4-3.6-1-5.1-1.9-1.6-.9-2.8-2.1-3.9-3.6-1-1.5-1.7-3.3-1.9-5.4h8.2c.2 1.1.6 2.1 1.2 2.8s1.3 1.3 2 1.7c.8.4 1.7.7 2.6.8 1 .1 2 .2 3 .2 3.3 0 5.7-.8 7.2-2.4 1.5-1.6 2.3-4 2.3-7v-5.6c-1.1 2-2.7 3.6-4.7 4.8-2 1.1-4.1 1.7-6.4 1.7-3 0-5.5-.5-7.5-1.5-2.1-1-3.8-2.4-5.1-4.2-1.4-1.8-2.3-3.8-3-6.2-.6-2.3-.9-4.8-.9-7.5 0-2.5.4-4.8 1.1-7.1.8-2.2 1.9-4.2 3.3-5.9 1.4-1.7 3.2-3 5.3-4s4.4-1.5 7-1.5c2.3 0 4.5.5 6.4 1.5 2 1 3.5 2.5 4.5 4.6h.1v-5.1h8.1V124zm-18-4.5c1.8 0 3.3-.4 4.6-1.1 1.3-.7 2.3-1.7 3.1-2.9.8-1.2 1.4-2.6 1.7-4.1.4-1.5.5-3.1.5-4.7s-.2-3.1-.6-4.6c-.4-1.5-1-2.8-1.8-3.9s-1.8-2-3.1-2.7c-1.3-.7-2.8-1-4.5-1-1.8 0-3.3.4-4.6 1.1-1.2.8-2.2 1.8-3 3-.8 1.2-1.3 2.6-1.6 4.1-.3 1.5-.5 3.1-.5 4.6 0 1.5.2 3 .6 4.5.4 1.5 1 2.8 1.8 3.9s1.8 2.1 3 2.8 2.6 1 4.4 1z"/>
+	                        <path d="M279 74.9h8.1v51H279v-51z"/>
+	                        <path d="M301.6 109.5c0 1.4.2 2.8.6 4.1.4 1.3 1 2.5 1.8 3.5s1.8 1.8 3.1 2.4c1.2.6 2.7.9 4.4.9 2.4 0 4.3-.5 5.8-1.5s2.5-2.6 3.3-4.6h7.7c-.4 2-1.2 3.8-2.2 5.4-1 1.6-2.3 2.9-3.8 4s-3.1 1.9-5 2.4c-1.8.5-3.8.8-5.8.8-2.9 0-5.5-.5-7.7-1.4-2.2-1-4.1-2.3-5.7-4-1.5-1.7-2.7-3.8-3.5-6.1-.8-2.4-1.2-5-1.2-7.9 0-2.6.4-5.1 1.3-7.5.8-2.4 2-4.4 3.6-6.2 1.5-1.8 3.4-3.2 5.6-4.3 2.2-1 4.7-1.6 7.4-1.6 2.9 0 5.5.6 7.8 1.8s4.2 2.8 5.8 4.8c1.5 2 2.6 4.3 3.3 6.9.7 2.6.9 5.3.5 8h-27.1zm19-5.3c-.1-1.3-.4-2.5-.8-3.7-.5-1.2-1.1-2.2-1.9-3.1-.8-.9-1.7-1.6-2.9-2.1-1.1-.5-2.4-.8-3.8-.8s-2.7.3-3.9.8c-1.2.5-2.2 1.2-3 2.1-.8.9-1.5 1.9-2 3.1-.5 1.2-.8 2.5-.8 3.9h19.1z"/>
+	                        <path d="M334.9 116.3h9.9v9.7h-9.9v-9.7z"/>
+	                        <path d="M12.9 74.9v46.9h20.6v4.1H8v-51h4.9z"/>
+	                        <path d="M39.1 113.7c.5 1.7 1.2 3.3 2.2 4.7 1 1.4 2.3 2.5 3.8 3.4 1.5.9 3.4 1.4 5.5 1.4 3.3 0 5.9-.9 7.7-2.6 1.9-1.7 3.1-4 3.9-6.9h4.5c-1 4.2-2.7 7.4-5.3 9.7-2.5 2.3-6.2 3.4-10.8 3.4-2.9 0-5.4-.5-7.5-1.5-2.1-1-3.8-2.4-5.2-4.2-1.3-1.8-2.3-3.9-3-6.2-.6-2.4-1-4.8-1-7.5 0-2.4.3-4.8 1-7.1.6-2.3 1.6-4.4 3-6.3 1.3-1.8 3.1-3.3 5.2-4.4 2.1-1.1 4.6-1.7 7.5-1.7 3 0 5.5.6 7.6 1.8 2.1 1.2 3.8 2.8 5.1 4.7s2.3 4.1 2.8 6.6c.6 2.5.8 5 .7 7.6H38.4c0 1.7.2 3.4.7 5.1zM61.4 100c-.5-1.6-1.3-3-2.3-4.2-1-1.2-2.2-2.2-3.6-2.9-1.4-.7-3.1-1.1-4.9-1.1-1.9 0-3.5.4-4.9 1.1-1.4.7-2.6 1.7-3.6 2.9s-1.8 2.6-2.4 4.2c-.6 1.6-1 3.2-1.2 4.9h23.9c-.2-1.7-.5-3.4-1-4.9z"/>
+	                        <path d="M101.3 130.3c-.6 2.2-1.5 4.1-2.8 5.6-1.3 1.5-3 2.7-5 3.5-2.1.8-4.6 1.2-7.6 1.2-1.9 0-3.7-.2-5.4-.6-1.8-.4-3.3-1.1-4.8-2-1.4-.9-2.6-2.1-3.5-3.5-.9-1.4-1.5-3.1-1.6-5h4.5c.2 1.4.7 2.5 1.4 3.5.7.9 1.5 1.7 2.5 2.3 1 .6 2.1 1 3.3 1.3 1.2.3 2.4.4 3.6.4 4.2 0 7.2-1.2 9.1-3.6 1.9-2.4 2.8-5.8 2.8-10.3v-5h-.1c-1 2.3-2.6 4.1-4.6 5.5-2 1.4-4.4 2.1-7.1 2.1-3 0-5.5-.5-7.6-1.5-2.1-1-3.8-2.3-5.2-4s-2.3-3.7-3-6c-.6-2.3-.9-4.8-.9-7.4 0-2.5.4-4.9 1.1-7.2.7-2.3 1.8-4.2 3.2-5.9 1.4-1.7 3.1-3 5.2-4s4.4-1.5 7.1-1.5c1.4 0 2.7.2 3.9.6 1.2.4 2.3.9 3.3 1.6 1 .7 1.9 1.5 2.7 2.4.8.9 1.4 1.9 1.8 2.9h.1V89h4.5v33.9c0 2.7-.3 5.2-.9 7.4zM91 120.4c1.5-.8 2.7-1.9 3.7-3.3s1.8-2.9 2.3-4.7c.5-1.8.8-3.6.8-5.4 0-1.8-.2-3.6-.6-5.4-.4-1.8-1.1-3.5-2.1-4.9-1-1.5-2.2-2.7-3.7-3.6-1.5-.9-3.3-1.4-5.5-1.4s-4 .4-5.5 1.3-2.8 2-3.8 3.5c-1 1.4-1.7 3.1-2.2 4.9-.5 1.8-.7 3.7-.7 5.6 0 1.9.2 3.7.7 5.4.5 1.8 1.2 3.3 2.2 4.7 1 1.4 2.3 2.5 3.8 3.3 1.5.8 3.3 1.3 5.4 1.3 2 0 3.7-.4 5.2-1.3z"/>
+	                        <path d="M109.9 94.7c.8-1.6 1.8-2.9 3.1-3.9s2.8-1.7 4.6-2.2c1.8-.5 3.7-.7 5.9-.7 1.6 0 3.2.2 4.9.5 1.6.3 3.1.9 4.4 1.8s2.3 2.1 3.1 3.6c.8 1.5 1.2 3.6 1.2 6v19.6c0 1.8.9 2.7 2.6 2.7.5 0 1-.1 1.4-.3v3.8c-.5.1-1 .2-1.4.2-.4 0-.9.1-1.5.1-1.1 0-2.1-.2-2.8-.5-.7-.3-1.2-.8-1.6-1.3-.4-.6-.6-1.3-.8-2-.1-.8-.2-1.7-.2-2.6h-.1c-.8 1.2-1.6 2.3-2.5 3.2-.8.9-1.8 1.7-2.8 2.3-1 .6-2.2 1.1-3.5 1.4-1.3.3-2.9.5-4.7.5-1.7 0-3.3-.2-4.8-.6-1.5-.4-2.8-1-3.9-1.9-1.1-.9-2-2-2.6-3.4-.6-1.4-1-3-1-4.8 0-2.6.6-4.6 1.7-6 1.1-1.5 2.7-2.6 4.5-3.3 1.9-.8 4-1.3 6.4-1.6l7.2-.9c1-.1 1.8-.2 2.5-.4s1.3-.4 1.8-.8.8-.8 1.1-1.5c.3-.6.4-1.4.4-2.4 0-1.5-.2-2.8-.8-3.8-.5-1-1.2-1.8-2.1-2.3-.9-.6-1.9-1-3.1-1.2s-2.4-.3-3.8-.3c-2.9 0-5.2.7-7 2-1.8 1.4-2.8 3.5-2.9 6.5h-4.5c.4-2 .9-3.9 1.6-5.5zm22.6 11c-.3.5-.8.9-1.6 1.1-.8.2-1.5.4-2.1.5-1.9.3-3.9.6-5.9.9-2 .3-3.9.7-5.5 1.2-1.7.5-3 1.3-4.1 2.3-1.1 1-1.6 2.4-1.6 4.2 0 1.1.2 2.2.7 3 .5.9 1.1 1.6 1.8 2.3.8.6 1.6 1.1 2.6 1.5 1 .3 2 .5 3.1.5 1.7 0 3.4-.3 4.9-.8 1.6-.5 2.9-1.3 4.1-2.3 1.2-1 2.1-2.2 2.8-3.6.7-1.4 1-3 1-4.9v-5.9h-.2z"/>
+	                        <path d="M148.9 74.9v51h-4.5v-51h4.5z"/>
+	                    </g>
+	                    <g id="logogram">
+	                        <linearGradient id="legalEagle_blue_gradient_1" x1="155.2194" x2="247.9166" y1="66.5035" y2="66.3388" gradientUnits="userSpaceOnUse">
+	                            <stop offset="0" stop-color="#CF1777"/>
+	                            <stop offset="1" stop-color="#532D88"/>
+	                        </linearGradient>
+	                        <path d="M247.5 52.5l-66.8 1.4-25.5 13.4 22.5-5.2 49.9 18.1z" class="legalEagle_blue_gradient_1"/>
+	                        <linearGradient id="#legalEagle_yellow_gradient_1" x1="157.5116" x2="217.0647" y1="65.8756" y2="56.6117" gradientUnits="userSpaceOnUse">
+	                            <stop offset="0" stop-color="#ECC18D"/>
+	                            <stop offset="1" stop-color="#F9A21B"/>
+	                        </linearGradient>
+	                        <path d="M181.1 56.8L243 69.2 261.7 33 183 46.6l-27.8 20.5z" class="legalEagle_yellow_gradient_1"/>
+	                        <linearGradient id="legalEagle_purple_gradient_1" x1="167.6514" x2="235.9779" y1="68.1667" y2="40.4809" gradientUnits="userSpaceOnUse">
+	                            <stop offset="0" stop-color="#0296C3"/>
+	                            <stop offset="1" stop-color="#026291"/>
+	                        </linearGradient>
+	                        <path d="M275.3 8l-90.8 30.1-29.2 29.1 28.5-16.7 75.8 3.7z" class="legalEagle_purple_gradient_1"/>
+	                    </g>
+	                </svg>
+				</section>
+
+				<section>
+					<p>Express Legal Access.</p>
+				</section>
+
+				<section>
+					<h1>Latar Belakang.</h1>
+				</section>
+
+                <section>
+                    <h2>Identifikasi Peluang Bisnis.</h2>
+                    <ul>
+                        <li class="fragment">Pengguna Internet: 15.8% dari Jumlah Penduduk</li>
+                        <li class="fragment">Kebutuhan akan pendampingan Hukum</li>
+                        <li class="fragment">Bagaimana kondisi masyarakat saat ini?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Penjelasan Produk.</h1>
+                </section>
+
+                <section>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="legalEagle_logo_svg"
+                        viewBox="0 0 352 152"
+                        width="640"
+                        preserveAspectRatio>
+                        <style>
+                            .legalEagle_blue_gradient_1{fill:url(#legalEagle_blue_gradient_1);}
+                            .legalEagle_yellow_gradient_1{fill:url(##legalEagle_yellow_gradient_1);}
+                            .legalEagle_purple_gradient_1{fill:url(#legalEagle_purple_gradient_1);}
+                            #logotype path { fill: #FFF; }
+                        </style>
+                        <g id="logotype">
+                            <path d="M154.9 74.9h36.7v7.7h-27.8V96h25.7v7.3h-25.7v14.9h28.3v7.7h-37.2v-51z"/>
+                            <path d="M229 117.7c0 1 .1 1.7.4 2.1.3.4.8.6 1.5.6h.9c.3 0 .7 0 1.1-.1v5.6c-.3.1-.7.2-1.1.3-.5.1-.9.2-1.4.3-.5.1-1 .2-1.4.2-.5 0-.9.1-1.2.1-1.7 0-3.1-.3-4.1-1-1.1-.7-1.8-1.8-2.1-3.5-1.6 1.6-3.6 2.7-6 3.4-2.4.7-4.6 1.1-6.8 1.1-1.7 0-3.3-.2-4.8-.7-1.5-.5-2.9-1.1-4-2-1.2-.9-2.1-2-2.8-3.4-.7-1.4-1-2.9-1-4.8 0-2.3.4-4.1 1.3-5.6.8-1.4 1.9-2.5 3.3-3.4 1.4-.8 2.9-1.4 4.6-1.8 1.7-.4 3.4-.6 5.1-.8 1.5-.3 2.9-.5 4.2-.6 1.3-.1 2.5-.3 3.5-.6s1.8-.7 2.4-1.3c.6-.6.9-1.5.9-2.7 0-1-.2-1.9-.8-2.6-.5-.7-1.1-1.2-1.9-1.5-.7-.4-1.6-.6-2.5-.7-.9-.1-1.8-.2-2.6-.2-2.3 0-4.2.5-5.6 1.4-1.5 1-2.3 2.4-2.5 4.4h-8.1c.1-2.4.7-4.4 1.7-5.9 1-1.6 2.3-2.8 3.8-3.8s3.3-1.6 5.3-2c2-.4 4-.6 6-.6 1.8 0 3.6.2 5.4.6 1.8.4 3.3 1 4.8 1.9 1.4.9 2.5 2 3.4 3.3s1.3 3 1.3 5v19.3zm-8.2-10.3c-1.2.8-2.8 1.3-4.6 1.5-1.8.2-3.6.4-5.4.8-.9.1-1.7.3-2.5.6s-1.5.6-2.1 1.1c-.6.5-1.1 1-1.5 1.8-.4.7-.5 1.6-.5 2.7 0 .9.3 1.7.8 2.3.5.6 1.2 1.1 1.9 1.5.7.4 1.5.6 2.4.8.9.1 1.7.2 2.4.2.9 0 1.9-.1 2.9-.4 1-.2 2-.6 3-1.2.9-.6 1.7-1.3 2.3-2.2.6-.9.9-2 .9-3.3v-6.2z"/>
+                            <path d="M271.2 124c0 5.6-1.6 9.7-4.7 12.5-3.1 2.7-7.6 4.1-13.5 4.1-1.9 0-3.7-.2-5.6-.6-1.9-.4-3.6-1-5.1-1.9-1.6-.9-2.8-2.1-3.9-3.6-1-1.5-1.7-3.3-1.9-5.4h8.2c.2 1.1.6 2.1 1.2 2.8s1.3 1.3 2 1.7c.8.4 1.7.7 2.6.8 1 .1 2 .2 3 .2 3.3 0 5.7-.8 7.2-2.4 1.5-1.6 2.3-4 2.3-7v-5.6c-1.1 2-2.7 3.6-4.7 4.8-2 1.1-4.1 1.7-6.4 1.7-3 0-5.5-.5-7.5-1.5-2.1-1-3.8-2.4-5.1-4.2-1.4-1.8-2.3-3.8-3-6.2-.6-2.3-.9-4.8-.9-7.5 0-2.5.4-4.8 1.1-7.1.8-2.2 1.9-4.2 3.3-5.9 1.4-1.7 3.2-3 5.3-4s4.4-1.5 7-1.5c2.3 0 4.5.5 6.4 1.5 2 1 3.5 2.5 4.5 4.6h.1v-5.1h8.1V124zm-18-4.5c1.8 0 3.3-.4 4.6-1.1 1.3-.7 2.3-1.7 3.1-2.9.8-1.2 1.4-2.6 1.7-4.1.4-1.5.5-3.1.5-4.7s-.2-3.1-.6-4.6c-.4-1.5-1-2.8-1.8-3.9s-1.8-2-3.1-2.7c-1.3-.7-2.8-1-4.5-1-1.8 0-3.3.4-4.6 1.1-1.2.8-2.2 1.8-3 3-.8 1.2-1.3 2.6-1.6 4.1-.3 1.5-.5 3.1-.5 4.6 0 1.5.2 3 .6 4.5.4 1.5 1 2.8 1.8 3.9s1.8 2.1 3 2.8 2.6 1 4.4 1z"/>
+                            <path d="M279 74.9h8.1v51H279v-51z"/>
+                            <path d="M301.6 109.5c0 1.4.2 2.8.6 4.1.4 1.3 1 2.5 1.8 3.5s1.8 1.8 3.1 2.4c1.2.6 2.7.9 4.4.9 2.4 0 4.3-.5 5.8-1.5s2.5-2.6 3.3-4.6h7.7c-.4 2-1.2 3.8-2.2 5.4-1 1.6-2.3 2.9-3.8 4s-3.1 1.9-5 2.4c-1.8.5-3.8.8-5.8.8-2.9 0-5.5-.5-7.7-1.4-2.2-1-4.1-2.3-5.7-4-1.5-1.7-2.7-3.8-3.5-6.1-.8-2.4-1.2-5-1.2-7.9 0-2.6.4-5.1 1.3-7.5.8-2.4 2-4.4 3.6-6.2 1.5-1.8 3.4-3.2 5.6-4.3 2.2-1 4.7-1.6 7.4-1.6 2.9 0 5.5.6 7.8 1.8s4.2 2.8 5.8 4.8c1.5 2 2.6 4.3 3.3 6.9.7 2.6.9 5.3.5 8h-27.1zm19-5.3c-.1-1.3-.4-2.5-.8-3.7-.5-1.2-1.1-2.2-1.9-3.1-.8-.9-1.7-1.6-2.9-2.1-1.1-.5-2.4-.8-3.8-.8s-2.7.3-3.9.8c-1.2.5-2.2 1.2-3 2.1-.8.9-1.5 1.9-2 3.1-.5 1.2-.8 2.5-.8 3.9h19.1z"/>
+                            <path d="M334.9 116.3h9.9v9.7h-9.9v-9.7z"/>
+                            <path d="M12.9 74.9v46.9h20.6v4.1H8v-51h4.9z"/>
+                            <path d="M39.1 113.7c.5 1.7 1.2 3.3 2.2 4.7 1 1.4 2.3 2.5 3.8 3.4 1.5.9 3.4 1.4 5.5 1.4 3.3 0 5.9-.9 7.7-2.6 1.9-1.7 3.1-4 3.9-6.9h4.5c-1 4.2-2.7 7.4-5.3 9.7-2.5 2.3-6.2 3.4-10.8 3.4-2.9 0-5.4-.5-7.5-1.5-2.1-1-3.8-2.4-5.2-4.2-1.3-1.8-2.3-3.9-3-6.2-.6-2.4-1-4.8-1-7.5 0-2.4.3-4.8 1-7.1.6-2.3 1.6-4.4 3-6.3 1.3-1.8 3.1-3.3 5.2-4.4 2.1-1.1 4.6-1.7 7.5-1.7 3 0 5.5.6 7.6 1.8 2.1 1.2 3.8 2.8 5.1 4.7s2.3 4.1 2.8 6.6c.6 2.5.8 5 .7 7.6H38.4c0 1.7.2 3.4.7 5.1zM61.4 100c-.5-1.6-1.3-3-2.3-4.2-1-1.2-2.2-2.2-3.6-2.9-1.4-.7-3.1-1.1-4.9-1.1-1.9 0-3.5.4-4.9 1.1-1.4.7-2.6 1.7-3.6 2.9s-1.8 2.6-2.4 4.2c-.6 1.6-1 3.2-1.2 4.9h23.9c-.2-1.7-.5-3.4-1-4.9z"/>
+                            <path d="M101.3 130.3c-.6 2.2-1.5 4.1-2.8 5.6-1.3 1.5-3 2.7-5 3.5-2.1.8-4.6 1.2-7.6 1.2-1.9 0-3.7-.2-5.4-.6-1.8-.4-3.3-1.1-4.8-2-1.4-.9-2.6-2.1-3.5-3.5-.9-1.4-1.5-3.1-1.6-5h4.5c.2 1.4.7 2.5 1.4 3.5.7.9 1.5 1.7 2.5 2.3 1 .6 2.1 1 3.3 1.3 1.2.3 2.4.4 3.6.4 4.2 0 7.2-1.2 9.1-3.6 1.9-2.4 2.8-5.8 2.8-10.3v-5h-.1c-1 2.3-2.6 4.1-4.6 5.5-2 1.4-4.4 2.1-7.1 2.1-3 0-5.5-.5-7.6-1.5-2.1-1-3.8-2.3-5.2-4s-2.3-3.7-3-6c-.6-2.3-.9-4.8-.9-7.4 0-2.5.4-4.9 1.1-7.2.7-2.3 1.8-4.2 3.2-5.9 1.4-1.7 3.1-3 5.2-4s4.4-1.5 7.1-1.5c1.4 0 2.7.2 3.9.6 1.2.4 2.3.9 3.3 1.6 1 .7 1.9 1.5 2.7 2.4.8.9 1.4 1.9 1.8 2.9h.1V89h4.5v33.9c0 2.7-.3 5.2-.9 7.4zM91 120.4c1.5-.8 2.7-1.9 3.7-3.3s1.8-2.9 2.3-4.7c.5-1.8.8-3.6.8-5.4 0-1.8-.2-3.6-.6-5.4-.4-1.8-1.1-3.5-2.1-4.9-1-1.5-2.2-2.7-3.7-3.6-1.5-.9-3.3-1.4-5.5-1.4s-4 .4-5.5 1.3-2.8 2-3.8 3.5c-1 1.4-1.7 3.1-2.2 4.9-.5 1.8-.7 3.7-.7 5.6 0 1.9.2 3.7.7 5.4.5 1.8 1.2 3.3 2.2 4.7 1 1.4 2.3 2.5 3.8 3.3 1.5.8 3.3 1.3 5.4 1.3 2 0 3.7-.4 5.2-1.3z"/>
+                            <path d="M109.9 94.7c.8-1.6 1.8-2.9 3.1-3.9s2.8-1.7 4.6-2.2c1.8-.5 3.7-.7 5.9-.7 1.6 0 3.2.2 4.9.5 1.6.3 3.1.9 4.4 1.8s2.3 2.1 3.1 3.6c.8 1.5 1.2 3.6 1.2 6v19.6c0 1.8.9 2.7 2.6 2.7.5 0 1-.1 1.4-.3v3.8c-.5.1-1 .2-1.4.2-.4 0-.9.1-1.5.1-1.1 0-2.1-.2-2.8-.5-.7-.3-1.2-.8-1.6-1.3-.4-.6-.6-1.3-.8-2-.1-.8-.2-1.7-.2-2.6h-.1c-.8 1.2-1.6 2.3-2.5 3.2-.8.9-1.8 1.7-2.8 2.3-1 .6-2.2 1.1-3.5 1.4-1.3.3-2.9.5-4.7.5-1.7 0-3.3-.2-4.8-.6-1.5-.4-2.8-1-3.9-1.9-1.1-.9-2-2-2.6-3.4-.6-1.4-1-3-1-4.8 0-2.6.6-4.6 1.7-6 1.1-1.5 2.7-2.6 4.5-3.3 1.9-.8 4-1.3 6.4-1.6l7.2-.9c1-.1 1.8-.2 2.5-.4s1.3-.4 1.8-.8.8-.8 1.1-1.5c.3-.6.4-1.4.4-2.4 0-1.5-.2-2.8-.8-3.8-.5-1-1.2-1.8-2.1-2.3-.9-.6-1.9-1-3.1-1.2s-2.4-.3-3.8-.3c-2.9 0-5.2.7-7 2-1.8 1.4-2.8 3.5-2.9 6.5h-4.5c.4-2 .9-3.9 1.6-5.5zm22.6 11c-.3.5-.8.9-1.6 1.1-.8.2-1.5.4-2.1.5-1.9.3-3.9.6-5.9.9-2 .3-3.9.7-5.5 1.2-1.7.5-3 1.3-4.1 2.3-1.1 1-1.6 2.4-1.6 4.2 0 1.1.2 2.2.7 3 .5.9 1.1 1.6 1.8 2.3.8.6 1.6 1.1 2.6 1.5 1 .3 2 .5 3.1.5 1.7 0 3.4-.3 4.9-.8 1.6-.5 2.9-1.3 4.1-2.3 1.2-1 2.1-2.2 2.8-3.6.7-1.4 1-3 1-4.9v-5.9h-.2z"/>
+                            <path d="M148.9 74.9v51h-4.5v-51h4.5z"/>
+                        </g>
+                        <g id="logogram">
+                            <linearGradient id="legalEagle_blue_gradient_1" x1="155.2194" x2="247.9166" y1="66.5035" y2="66.3388" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#CF1777"/>
+                                <stop offset="1" stop-color="#532D88"/>
+                            </linearGradient>
+                            <path d="M247.5 52.5l-66.8 1.4-25.5 13.4 22.5-5.2 49.9 18.1z" class="legalEagle_blue_gradient_1"/>
+                            <linearGradient id="#legalEagle_yellow_gradient_1" x1="157.5116" x2="217.0647" y1="65.8756" y2="56.6117" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#ECC18D"/>
+                                <stop offset="1" stop-color="#F9A21B"/>
+                            </linearGradient>
+                            <path d="M181.1 56.8L243 69.2 261.7 33 183 46.6l-27.8 20.5z" class="legalEagle_yellow_gradient_1"/>
+                            <linearGradient id="legalEagle_purple_gradient_1" x1="167.6514" x2="235.9779" y1="68.1667" y2="40.4809" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#0296C3"/>
+                                <stop offset="1" stop-color="#026291"/>
+                            </linearGradient>
+                            <path d="M275.3 8l-90.8 30.1-29.2 29.1 28.5-16.7 75.8 3.7z" class="legalEagle_purple_gradient_1"/>
+                        </g>
+                    </svg>
+                    <p>Express Legal Access</p>
+                </section>
+
+                <section>
+                    <p><small>image placeholder.</small></p>
+                </section>
+
+                <section>
+                    <h2>Main Feature.</h2>
+                    <ul>
+                        <li class="fragment">Dialog interaktif dengan Lawyer via Live Chat</li>
+                        <li class="fragment">Legal Document Generator</li>
+                        <li class="fragment">Live Broadcast Dialog</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><small>image placeholder.</small></p>
+                </section>
+
+                <section>
+                    <p>Potensi Bisnis</p>
+                    <h3>&ldquo;Banyaknya kebutuhan akan Legal Advisor, dan tidak adanya aplikasi online yang menyediakan jasa dan/atau fungsi sejenis.&rdquo;</h3>
+                </section>
+
+                <section>
+                    <h1>Analisa.</h1>
+                </section>
+
+                <section>
+                    <p><span class="small">Internal Factor.</span></p>
+                    <h3 class="fragments">Strengths</h3>
+                    <ul class="fragments">
+                        <li>Mudah di akses</li>
+                        <li>Murah</li>
+                        <li>Well-thought User Experience Design</li>
+                        <li>Adaptasi teknologi terkini</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><span class="small">Internal Factor.</span></p>
+                    <h3 class="fragments">Weakness</h3>
+                    <ul class="fragments">
+                        <li>Biaya infrastruktur yang tinggi</li>
+                        <li>Konten yang terlalu luas</li>
+                        <li>Belum teruji oleh market</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><span class="small">External Factor.</span></p>
+                    <h3 class="fragments">Opportunities</h3>
+                    <ul class="fragments">
+                        <li>Jumlah pengguna aplikasi online terus meningkat</li>
+                        <li>Kebutuhan pasar yang tinggi</li>
+                        <li>Minimnya jumlah kompetitor</li>
+                        <li>Tingginya biaya lawyer</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><span class="small">External Factor.</span></p>
+                    <h3 class="fragments">Threads</h3>
+                    <ul class="fragments">
+                        <li>Minimnya wawasan masyarakat akan kebutuhan Hukum</li>
+                        <li>Adanya indikasi kompetisi yang bersifat negatif</li>
+                        <li>Infrastruktur jaringan yang kurang memadai</li>
+                        <li>Provider mobile internet, mematok harga yang tinggi</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Perencanaan Bisnis.</h1>
+                </section>
+
+                <section>
+                    <h3>Target Pasar.</h3>
+                    <ul class="fragments">
+                        <li>Umur: 25 - 55 tahun</li>
+                        <li>Kelas Ekonomi: A s/d C</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Pembiayaan.</h3>
+                    <p>Venture Capital</p>
+                </section>
+
+                <section>
+                    <h1>Studi Kelayakan.</h1>
+                </section>
+
+                <section>
+                    <p class="small">Studi Kelayakan.</p>
+                    <p>Untuk formasi awal, kami terdiri dari 1 orang Lawyer, 1 orang designer, 1 orang programmer. Untuk saat ini, SDM utama telah tersedia, meskipun jumlahnya belum memenuhi, namun hal ini sudah menjadi modal yang luar biasa bagi usaha kami.</p>
+                </section>
+			</div>
+		</div>
+
+        <script>
+            (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
+            function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})};
+            function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
+
+            (function(){'use strict';function h(a){document.body?a():document.addEventListener("DOMContentLoaded",a)};function k(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.g=document.createElement("span");this.f=-1;this.b.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+            this.g.style.cssText="display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;";this.b.appendChild(this.h);this.c.appendChild(this.g);this.a.appendChild(this.b);this.a.appendChild(this.c)}
+            function w(a,b){a.a.style.cssText="min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+b+";"}function x(a){var b=a.a.offsetWidth,c=b+100;a.g.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.f!==b?(a.f=b,!0):!1}
+            function y(a,b){a.b.addEventListener("scroll",function(){x(a)&&null!==a.a.parentNode&&b(a.f)},!1);a.c.addEventListener("scroll",function(){x(a)&&null!==a.a.parentNode&&b(a.f)},!1);x(a)};function z(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"normal"}var A=null,B=null,F=!!window.FontFace;function G(){if(null===B){var a=document.createElement("div");a.style.font="condensed 100px sans-serif";B=""!==a.style.font}return B}function H(a,b){return[a.style,a.weight,G()?a.stretch:"","100px",b].join(" ")}
+            z.prototype.a=function(a,b){var c=this,q=a||"BESbswy",C=b||3E3,D=Date.now();return new Promise(function(a,b){if(F){var p=function(){Date.now()-D>=C?b(c):document.fonts.load(H(c,c.family),q).then(function(b){1<=b.length?a(c):setTimeout(p,25)}).catch(function(){b(c)})};p()}else h(function(){function r(){var b;if(b=-1!=e&&-1!=f||-1!=e&&-1!=g||-1!=f&&-1!=g)(b=e!=f&&e!=g&&f!=g)||(null===A&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),A=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],
+            10)&&11>=parseInt(b[2],10))),b=A&&(e==t&&f==t&&g==t||e==u&&f==u&&g==u||e==v&&f==v&&g==v)),b=!b;b&&(null!==d.parentNode&&d.parentNode.removeChild(d),clearTimeout(E),a(c))}function p(){if(Date.now()-D>=C)null!==d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===a||void 0===a)e=l.a.offsetWidth,f=m.a.offsetWidth,g=n.a.offsetWidth,r();E=setTimeout(p,50)}}var l=new k(q),m=new k(q),n=new k(q),e=-1,f=-1,g=-1,t=-1,u=-1,v=-1,d=document.createElement("div"),E=0;d.dir="ltr";w(l,
+            H(c,"sans-serif"));w(m,H(c,"serif"));w(n,H(c,"monospace"));d.appendChild(l.a);d.appendChild(m.a);d.appendChild(n.a);document.body.appendChild(d);t=l.a.offsetWidth;u=m.a.offsetWidth;v=n.a.offsetWidth;p();y(l,function(a){e=a;r()});w(l,H(c,'"'+c.family+'",sans-serif'));y(m,function(a){f=a;r()});w(m,H(c,'"'+c.family+'",serif'));y(n,function(a){g=a;r()});w(n,H(c,'"'+c.family+'",monospace'))})})};window.FontFaceObserver=z;window.FontFaceObserver.prototype.check=z.prototype.a;"undefined"!==typeof module&&(module.exports=window.FontFaceObserver);}());
+        </script>
+
+        <script>
+            (function( w ){
+                if ( w.document.documentElement.className.indexOf( "loaded" ) > -1 ) return;
+                var fontA = new w.FontFaceObserver( "LESans", { weight: 600, style: 'normal', stretch: 'normal' })
+                ,   fontB = new w.FontFaceObserver( "LESans", { weight: 600, style: 'italic', stretch: 'normal' })
+                ,   fontC = new w.FontFaceObserver( "LESans", { weight: 600, style: 'normal', stretch: 'condensed' })
+                ,   fontD = new w.FontFaceObserver( "LESans", { weight: 500, style: 'normal', stretch: 'normal' })
+                ,   fontE = new w.FontFaceObserver( "LESans", { weight: 400, style: 'normal', stretch: 'normal' })
+                ,   fontF = new w.FontFaceObserver( "LESans", { weight: 400, style: 'italic', stretch: 'normal' })
+                ,   fontG = new w.FontFaceObserver( "LESans", { weight: 300, style: 'normal', stretch: 'normal' })
+                ,   fontH = new w.FontFaceObserver( "LESans", { weight: 300, style: 'italic', stretch: 'normal' })
+                ,   fontI = new w.FontFaceObserver( "LESans", { weight: 200, style: 'normal', stretch: 'normal' })
+                ,   fontJ = new w.FontFaceObserver( "LESans", { weight: 200, style: 'italic', stretch: 'normal' })
+                ,   fontK = new w.FontFaceObserver( "LESans", { weight: 100, style: 'normal', stretch: 'normal' })
+                ,   fontL = new w.FontFaceObserver( "LESans", { weight: 100, style: 'italic', stretch: 'normal' });
+
+                w.Promise
+                    .all([ fontA.check(), fontB.check(), fontC.check(), fontD.check(), fontE.check(), fontF.check(), fontG.check(), fontH.check(), fontI.check(), fontJ.check(), fontK.check(), fontL.check() ])
+                    .then(
+                        function( res ){ console.log( 'font' ) },
+                        function( err ){ console.log( err ); }
+                    );
+            }( this ));
+        </script>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                fragments: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
